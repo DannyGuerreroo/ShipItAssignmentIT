@@ -4,7 +4,5 @@
     {
         decimal ShipCost { get; }
         string Product { get; }
-
-
     }
 }

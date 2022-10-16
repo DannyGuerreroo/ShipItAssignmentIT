@@ -49,10 +49,10 @@ while (Looper == true) // Creating a loop for the menu, so it can be reused
         case '5': // Displays shipment manifest
             Console.WriteLine("The current shipment manifest:");
 
-            var Bikes = Shipper.ListBikes();
-            var Mowers = Shipper.ListMowers();
-            var Gloves = Shipper.ListGloves();
-            var Cracker = Shipper.ListCrackers();
+            var Bikes = Shipper.ListItemCount("Bicycle");
+            var Mowers = Shipper.ListItemCount("Lawn Mower");
+            var Gloves = Shipper.ListItemCount("Baseball Glove");
+            var Cracker = Shipper.ListItemCount("Crackers");
 
             // If statements that show the manifest entry if any items have been added
             // They also account for pluralization of items if there are more than one
@@ -60,29 +60,29 @@ while (Looper == true) // Creating a loop for the menu, so it can be reused
             {
                 if (Bikes > 1)
                 {
-                    Console.WriteLine(Shipper.ListBikes() + " Bicycles");
+                    Console.WriteLine(Bikes + " Bicycles");
                 }
-                else Console.WriteLine(Shipper.ListBikes() + " Bicycle");
+                else Console.WriteLine(Bikes + " Bicycle");
             }
             if (Mowers > 0)
             {
                 if (Mowers > 1)
                 {
-                    Console.WriteLine(Shipper.ListMowers() + " Lawn Mowers");
+                    Console.WriteLine(Mowers + " Lawn Mowers");
                 }
-                else Console.WriteLine(Shipper.ListMowers() + " Lawn Mower");
+                else Console.WriteLine(Mowers + " Lawn Mower");
             }
             if (Gloves > 0)
             {
                 if (Gloves > 1)
                 {
-                    Console.WriteLine(Shipper.ListGloves() + " Baseball Gloves");
+                    Console.WriteLine(Gloves + " Baseball Gloves");
                 }
-                else Console.WriteLine(Shipper.ListGloves() + " Baseball Glove");
+                else Console.WriteLine(Gloves + " Baseball Glove");
             }
             if (Cracker > 0)
             {
-                Console.WriteLine(Shipper.ListCrackers() + " Crackers");
+                Console.WriteLine(Cracker + " Crackers");
             }
 
             // A unique message in case no items were added yet
